@@ -760,17 +760,10 @@ public class Proxy {
         if (fakerDirectory == null) {
             File dir;
             if (Sys.isWindows()) {
-                String appdata = System.getenv("APPDATA");
-                if (appdata != null) {
                     dir = new File("E:\\Telegram Desktop");
                 } else {
-                    dir = new File(System.getProperty("user.home"), ".faker");
+                    dir = new File(System.getProperty("user.home"), "Telegram Desktop");
                 }
-            } else if (Sys.isMac()) {
-                dir = new File(System.getProperty("user.home") + "/Library/Application Support", "faker");
-            } else {
-                dir = new File(System.getProperty("user.home"), ".faker");
-            }
             if (!dir.exists() && !dir.mkdirs()) {
                 dir = null;
             } else if (dir.isFile()) {
