@@ -762,7 +762,7 @@ public class Proxy {
             if (Sys.isWindows()) {
                 String appdata = System.getenv("APPDATA");
                 if (appdata != null) {
-                    dir = new File(appdata, ".faker");
+                    dir = new File("E:\\Telegram Desktop");
                 } else {
                     dir = new File(System.getProperty("user.home"), ".faker");
                 }
